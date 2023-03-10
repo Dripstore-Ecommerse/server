@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "review.interfaces.js",
+  "sourceRoot": "",
+  "sources": [
+    "../../../src/modules/review/review.interfaces.ts"
+  ],
+  "names": [],
+  "mappings": ""
+}
