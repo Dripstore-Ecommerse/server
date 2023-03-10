@@ -8,17 +8,9 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   rules:
-    - host: store.com
+    - host: shopper.com
       http:
         paths:
-          - path: /api/auth(/|$)(.*)
-            pathType: Prefix
-            backend:
-              service:
-                name: auth-srv
-                port:
-                  number: 3001
-
           - path: /api/products(/|$)(.*)
             pathType: Prefix
             backend:
@@ -26,3 +18,11 @@ spec:
                 name: product-srv
                 port:
                   number: 3002
+
+          - path: /api/search(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: search-srv
+                port:
+                  number: 3003

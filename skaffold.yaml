@@ -27,3 +27,12 @@ build:
         manual:
           - src: "src/**/*.js"
             dest: "."
+
+    - image: rhythmshandlya/search
+      context: search
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.js"
+            dest: "."
